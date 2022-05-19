@@ -1,0 +1,8 @@
+FROM --platform=linux/amd64 ubuntu:20.04
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libsdl2-dev libglew-dev build-essential pkg-config libstb-dev
+
+ADD . /repo
+WORKDIR /repo
+RUN gcc -o pl_mpeg_extract_frames pl_mpeg_extract_frames.c $(pkg-config --cflags --libs sdl2 glew ) -I/usr/include/stb

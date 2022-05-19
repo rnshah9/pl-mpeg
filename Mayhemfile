@@ -1,0 +1,6 @@
+project: rnshah9/pl-mpeg
+target: pl-mpeg
+
+cmds:
+  - cmd: /repo/pl_mpeg_extract_frames @@
+    filepath: /test.mpg
