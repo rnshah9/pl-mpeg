@@ -2,5 +2,4 @@ project: pl-mpeg
 target: pl-mpeg-extract-frames
 
 cmds:
-  - cmd: /repo/pl_mpeg_extract_frames /test.mpg
-    filepath: /test.mpg
+  - cmd: /pl_mpeg_extract_frames @@
